@@ -16,11 +16,28 @@ class MyApp extends StatelessWidget {
       ),
       backgroundColor: Colors.teal,
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
           Container(
             height: 100.0,
             width: 100.0,
             color: Colors.white,
+            margin: const EdgeInsets.all(10.0),
+            padding: const EdgeInsets.all(20.0),
+            child: const Text("Salomon"),
+          ),
+          Container(
+            height: 100.0,
+            width: 100.0,
+            color: Colors.red,
+            margin: const EdgeInsets.all(10.0),
+            padding: const EdgeInsets.all(20.0),
+            child: const Text("Salomon"),
+          ),
+          Container(
+            height: 100.0,
+            width: 100.0,
+            color: Colors.blue,
             margin: const EdgeInsets.all(10.0),
             padding: const EdgeInsets.all(20.0),
             child: const Text("Salomon"),
