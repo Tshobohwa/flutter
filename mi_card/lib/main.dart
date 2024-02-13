@@ -9,27 +9,34 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
         home: Scaffold(
       backgroundColor: Colors.teal,
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          CircleAvatar(
+          const CircleAvatar(
             radius: 50.0,
             backgroundImage: NetworkImage(
                 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'),
           ),
-          Text(
+          const Text(
             "Salomon Tshobohwa",
             style: TextStyle(
                 fontFamily: 'Lobster', fontSize: 32, color: Colors.white),
           ),
-          Text(
+          const Text(
             "FLUTTER DEVELOPER",
             style: TextStyle(
                 fontFamily: 'Poppins', color: Colors.white, fontSize: 24),
           ),
-          Card(
+          SizedBox(
+            width: 150,
+            child: Divider(
+              color: Colors.teal.shade200,
+            ),
+          ),
+          const Card(
               margin: EdgeInsets.all(10),
               color: Colors.white,
               child: Padding(
@@ -47,7 +54,7 @@ class MyApp extends StatelessWidget {
                   ],
                 ),
               )),
-          Card(
+          const Card(
               margin: EdgeInsets.all(10),
               color: Colors.white,
               child: Padding(
