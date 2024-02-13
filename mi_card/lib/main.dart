@@ -17,9 +17,12 @@ class MyApp extends StatelessWidget {
       body: Container(
         height: 100.0,
         width: 100.0,
+        color: Colors.white,
+        margin: const EdgeInsets.all(10.0),
+        padding: const EdgeInsets.all(20.0),
         child: const Text("Salomon"),
       ),
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.teal,
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.red,
         onPressed: () {},
