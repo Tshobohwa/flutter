@@ -15,33 +15,13 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.red,
       ),
       backgroundColor: Colors.teal,
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
+      body: const Column(
         children: <Widget>[
-          Container(
-            height: 100.0,
-            width: 100.0,
-            color: Colors.white,
-            margin: const EdgeInsets.all(10.0),
-            padding: const EdgeInsets.all(20.0),
-            child: const Text("Salomon"),
-          ),
-          Container(
-            height: 100.0,
-            width: 100.0,
-            color: Colors.red,
-            margin: const EdgeInsets.all(10.0),
-            padding: const EdgeInsets.all(20.0),
-            child: const Text("Salomon"),
-          ),
-          Container(
-            height: 100.0,
-            width: 100.0,
-            color: Colors.blue,
-            margin: const EdgeInsets.all(10.0),
-            padding: const EdgeInsets.all(20.0),
-            child: const Text("Salomon"),
-          ),
+          CircleAvatar(
+            radius: 50.0,
+            backgroundImage: NetworkImage(
+                'https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'),
+          )
         ],
       ),
       floatingActionButton: FloatingActionButton(
