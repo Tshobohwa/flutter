@@ -78,6 +78,11 @@ flutter:
     - family: Lobster
       fonts:
         - asset: assets/fonts/Lobster-Regular.ttf
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/Poppins-Regular.ttf
+        - asset: assets/fonts/Poppins-Thin.ttf
+          weight: 300
   #         style: italic
   #   - family: Trajan Pro
   #     fonts:
