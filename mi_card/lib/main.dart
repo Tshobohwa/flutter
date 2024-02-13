@@ -14,15 +14,19 @@ class MyApp extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.red,
       ),
-      body: Container(
-        height: 100.0,
-        width: 100.0,
-        color: Colors.white,
-        margin: const EdgeInsets.all(10.0),
-        padding: const EdgeInsets.all(20.0),
-        child: const Text("Salomon"),
-      ),
       backgroundColor: Colors.teal,
+      body: Column(
+        children: <Widget>[
+          Container(
+            height: 100.0,
+            width: 100.0,
+            color: Colors.white,
+            margin: const EdgeInsets.all(10.0),
+            padding: const EdgeInsets.all(20.0),
+            child: const Text("Salomon"),
+          ),
+        ],
+      ),
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.red,
         onPressed: () {},
