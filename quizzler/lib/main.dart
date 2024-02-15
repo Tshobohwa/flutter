@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:quizzler/models/question.dart';
 import 'package:quizzler/widgets/question_container.dart';
+import 'package:quizzler/widgets/scores_container.dart';
 
 main() {
   runApp(const Quizzler());
@@ -29,6 +30,15 @@ class QuizPage extends StatefulWidget {
 
 class _QuizPageState extends State<QuizPage> {
   var currentQuestionIndex = 0;
+  static const winIcon = Icon(
+    Icons.check,
+    color: Colors.green,
+  );
+  static const looseIcon = Icon(
+    Icons.close,
+    color: Colors.red,
+  );
+  static List<Icon> scores = [];
   static List<Question> questions = [
     Question(
         question: 'The Great Wall of China is visible from space.',
@@ -78,6 +88,9 @@ class _QuizPageState extends State<QuizPage> {
             child: TextButton(
               onPressed: () {
                 setState(() {
+                  questions[currentQuestionIndex].answer == true
+                      ? scores.add(winIcon)
+                      : scores.add(looseIcon);
                   currentQuestionIndex =
                       (currentQuestionIndex + 1) % questions.length;
                 });
@@ -97,6 +110,9 @@ class _QuizPageState extends State<QuizPage> {
               child: TextButton(
                 onPressed: () {
                   setState(() {
+                    questions[currentQuestionIndex].answer == false
+                        ? scores.add(winIcon)
+                        : scores.add(looseIcon);
                     currentQuestionIndex =
                         (currentQuestionIndex + 1) % questions.length;
                   });
@@ -107,6 +123,7 @@ class _QuizPageState extends State<QuizPage> {
                 ),
               ),
             )),
+        ScoresContainer(scores: scores)
       ],
     );
   }
