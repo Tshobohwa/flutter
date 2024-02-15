@@ -58,11 +58,11 @@ class _QuizPageState extends State<QuizPage> {
             flex: 1,
             child: Container(
               margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-              color: Colors.green,
+              color: Colors.red,
               child: TextButton(
                 onPressed: () {},
                 child: const Text(
-                  "Yes",
+                  "No",
                   style: TextStyle(color: Colors.white),
                 ),
               ),
