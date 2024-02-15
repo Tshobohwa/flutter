@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:quizzler_course/score_container.dart';
 
-void main() => runApp(Quizzler());
+void main() => runApp(const Quizzler());
 
 class Quizzler extends StatelessWidget {
-  // Quizzler({this.key})
-
+  const Quizzler({super.key});
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         backgroundColor: Colors.grey.shade900,
-        body: SafeArea(
+        body: const SafeArea(
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 10.0),
+            padding: EdgeInsets.symmetric(horizontal: 10.0),
             child: QuizPage(),
           ),
         ),
@@ -22,11 +22,13 @@ class Quizzler extends StatelessWidget {
 }
 
 class QuizPage extends StatefulWidget {
+  const QuizPage({super.key});
   @override
   _QuizPageState createState() => _QuizPageState();
 }
 
 class _QuizPageState extends State<QuizPage> {
+  final List<Icon> scores = [];
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -97,6 +99,7 @@ class _QuizPageState extends State<QuizPage> {
             ),
           ),
         ),
+        ScoreContainer(scores: scores)
       ],
     );
   }
